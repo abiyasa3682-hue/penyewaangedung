@@ -1,5 +1,4 @@
-<?php include 'config/database.php'; ?>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="utf-8">
@@ -33,9 +32,15 @@
                 <div class="search-bar" style="margin-top:18px;">
                     <select name="tipe">
                         <option>Pilih Tipe Acara</option>
+                        <option>Seminar</option>
+                        <option>Pernikahan</option>
+                        <option>Pesta</option>
                     </select>
                     <select name="kapasitas">
                         <option>Pilih Kapasitas</option>
+                        <option>50 Orang</option>
+                        <option>100 Orang</option>
+                        <option>200 Orang</option>
                     </select>
                     <input type="date" name="tanggal">
                     <a class="btn search-btn" href="#gedung">Cari Gedung</a>
@@ -54,20 +59,27 @@
         <section id="gedung" class="featured">
             <h2 style="margin-top:22px; text-align:center;">Gedung Unggulan Kami</h2>
             <div class="cards">
-                <?php
-                $sql = "SELECT * FROM gedung";
-                $result = mysqli_query($conn, $sql);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $img = "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=60";
-                ?>
                 <div class="card">
-                    <img src="<?= $img ?>" alt="<?= htmlspecialchars($row['nama_gedung']) ?>">
-                    <h3><?= htmlspecialchars($row['nama_gedung']) ?></h3>
-                    <div class="meta"><?= htmlspecialchars($row['kapasitas']) ?> orang</div>
-                    <div class="price">Rp <?= number_format($row['harga_sewa_per_jam'],0,',','.') ?></div>
-                    <div style="margin-top:10px;"><a class="btn" href="proses_sewa.php?id=<?= $row['id_gedung'] ?>">Booking</a></div>
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=60" alt="Gedung A">
+                    <h3>Gedung A</h3>
+                    <div class="meta">150 orang</div>
+                    <div class="price">Rp 1.200.000 / jam</div>
+                    <div style="margin-top:10px;"><a class="btn" href="#booking">Booking</a></div>
                 </div>
-                <?php } ?>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2b?auto=format&fit=crop&w=800&q=60" alt="Gedung B">
+                    <h3>Gedung B</h3>
+                    <div class="meta">200 orang</div>
+                    <div class="price">Rp 1.800.000 / jam</div>
+                    <div style="margin-top:10px;"><a class="btn" href="#booking">Booking</a></div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1559589689-577aabd1a1e0?auto=format&fit=crop&w=800&q=60" alt="Gedung C">
+                    <h3>Gedung C</h3>
+                    <div class="meta">300 orang</div>
+                    <div class="price">Rp 2.500.000 / jam</div>
+                    <div style="margin-top:10px;"><a class="btn" href="#booking">Booking</a></div>
+                </div>
             </div>
         </section>
     </div>
