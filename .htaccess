@@ -1,0 +1,4 @@
+DirectoryIndex index.php index.html
+
+# Pastikan file PHP dijalankan sebagai halaman utama jika index.html terdapat pada hosting
+# Many free PHP hosts support .htaccess in the public root.

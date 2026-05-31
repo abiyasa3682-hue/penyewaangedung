@@ -33,9 +33,15 @@
                 <div class="search-bar" style="margin-top:18px;">
                     <select name="tipe">
                         <option>Pilih Tipe Acara</option>
+                        <option>Seminar</option>
+                        <option>Pernikahan</option>
+                        <option>Pesta</option>
                     </select>
                     <select name="kapasitas">
                         <option>Pilih Kapasitas</option>
+                        <option>50 Orang</option>
+                        <option>100 Orang</option>
+                        <option>200 Orang</option>
                     </select>
                     <input type="date" name="tanggal">
                     <a class="btn search-btn" href="#gedung">Cari Gedung</a>
